@@ -146,7 +146,7 @@ public class BDao {
 		
 		upHit(boardId); //조회수 증가 메서드 호출
 		
-		String sql = "SELECT * FROM mvc_board WHERE bid=?" + boardId;
+		String sql = "SELECT * FROM mvc_board WHERE bid=" + boardId;
 		
 		BDto dto = this.template.queryForObject(sql, new BeanPropertyRowMapper(BDto.class));
 		//DB에서 dto형태로 레코드 1개 가져오기
